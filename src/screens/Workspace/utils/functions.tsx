@@ -1,4 +1,10 @@
-import { FaUserGraduate } from 'react-icons/fa';
+import {
+  FaGraduationCap,
+  FaRocketchat,
+  FaInfoCircle,
+  FaChess,
+  FaLightbulb,
+} from 'react-icons/fa';
 import { ICardInfo } from './types';
 
 export const expTime = () => {
@@ -33,12 +39,52 @@ export const expDate = () => {
 
 export const CardsInfo: ICardInfo[] = [
   {
-    Icon: FaUserGraduate,
+    Icon: FaGraduationCap,
     title: 'Acadêmico',
     content: (
       <>
-        <h5>Engenharia da computação</h5>
-        <h5>UNISATC</h5>
+        <p className="p2">Engenharia da computação</p>
+        <p className="p2">UNISATC</p>
+      </>
+    ),
+  },
+  {
+    Icon: FaRocketchat,
+    title: 'Conhecimento',
+    content: (
+      <>
+        <p className="p2">Quer ajuda ?</p>
+        <p className="p2">adoraria ouvir sua opniao</p>
+      </>
+    ),
+  },
+  {
+    Icon: FaInfoCircle,
+    title: 'Comunicativo',
+    content: (
+      <>
+        <p className="p2">O obvio tem que</p>
+        <p className="p2">dito nao e mesmo ?</p>
+      </>
+    ),
+  },
+  {
+    Icon: FaLightbulb,
+    title: 'Curioso',
+    content: (
+      <>
+        <p className="p2">Como isso funciona?</p>
+        <p className="p2"> vou descobrir!</p>
+      </>
+    ),
+  },
+  {
+    Icon: FaChess,
+    title: 'Perfecionista',
+    content: (
+      <>
+        <p className="p2">Qual sera a melhor</p>
+        <p className="p2"> forma de fazer isso ?</p>
       </>
     ),
   },

@@ -19,7 +19,7 @@ export const Workspace = () => {
           label="Documentos"
           labelPos="bottom"
           onClick={() => {
-            alert('Projetos');
+            // alert('Projetos');
           }}
         />
       </Style.ShortcutContainer>
@@ -36,7 +36,9 @@ export const Workspace = () => {
       </Style.ShortcutContainer>
 
       <Style.WelcomeText>
-        <AnimatedLetter text="Olá, seja bem vindo!" />
+        <AnimatedLetter text="Olá, " />
+        <AnimatedLetter text="seja bem vindo!" />
+        <AnimatedLetter text="ao meu portfolio!" />
       </Style.WelcomeText>
     </Style.Container>
   );

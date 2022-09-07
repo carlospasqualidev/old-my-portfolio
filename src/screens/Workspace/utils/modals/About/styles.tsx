@@ -3,26 +3,24 @@ import { theme } from '../../../../../styles/theme';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  padding-left: ${theme.size.xsm};
-  gap: ${theme.size.md};
+  gap: ${theme.size.sm};
+  flex-direction: row;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 // IMAGE
-export const HeaderContainer = styled.div`
+
+export const HeaderContent = styled.div`
   display: flex;
-  border-radius: ${theme.size.md};
+  flex-direction: column;
+  align-items: center;
+  border-radius: ${theme.size.xsm};
   background-color: ${theme.color.primary};
-  gap: ${theme.size.lg};
   padding: ${theme.size.sm};
-
-  width: 100%;
-`;
-
-export const Image = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: ${theme.size.sm};
+  gap: ${theme.size.sm};
 `;
 
 export const AboutContainer = styled.div`
@@ -37,6 +35,10 @@ export const AboutContainer = styled.div`
 export const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: ${theme.size.md};
+  grid-gap: ${theme.size.sm};
   width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 `;

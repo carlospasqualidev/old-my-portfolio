@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const LetterContainer = styled.div`
   display: flex;
@@ -6,9 +7,14 @@ export const LetterContainer = styled.div`
 `;
 
 export const Letter = styled.div`
+  color: ${theme.color.primaryLL};
+  transition: 1s;
   :hover {
     animation-name: initial;
     animation-play-state: running;
+    transition: 0.2s;
+
+    color: blue;
   }
   animation: jello 0.9s both;
   @keyframes jello {

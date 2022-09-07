@@ -36,7 +36,7 @@ export const ModalComponent = () => {
     children: JSX.Element;
     title: string;
     Icon: any;
-    size?: 'md' | 'lg';
+    size?: 'md' | 'lg' | 'fit-content';
   }) => (
     <Style.Background
       id="background"

@@ -10,9 +10,9 @@ export const CardInfo = ({
   bgColor = theme.color.primary,
 }: ICardInfo) => (
   <Style.Container bgColor={bgColor}>
-    <Icon size={64} />
+    <Icon size={48} />
     <Style.Info>
-      <h4>{title}</h4>
+      <p className="p1">{title}</p>
       <Hr />
       {content}
     </Style.Info>

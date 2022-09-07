@@ -37,13 +37,14 @@ export const Body = styled.div<{ animation: boolean; size: string }>`
 
   ${({ size }) => size === 'md' && 'width: 448px;'}
   ${({ size }) => size === 'lg' && 'width: 1024px;'}
+  ${({ size }) => size === 'fit-content' && 'width: fit-content;'}
 
-  margin-top: ${theme.size.xxlg};
+
+  margin-top: ${theme.size.xlg};
 
   background-color: ${theme.color.primaryD};
   border-radius: ${theme.size.xsm};
   z-index: 10;
-  height: 75%;
 
   @media (max-width: 900px) {
     width: 100vw;
@@ -75,7 +76,6 @@ export const TitleContainer = styled.div`
 
 export const BodyContent = styled.div`
   overflow-y: auto;
-  height: 65vh;
   width: 100%;
   padding: ${theme.size.md};
 `;

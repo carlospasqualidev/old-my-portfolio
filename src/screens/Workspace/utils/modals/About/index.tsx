@@ -3,15 +3,15 @@
 import { useEffect, useState } from 'react';
 
 // UI
-import { FaDesktop, FaRegClock } from 'react-icons/fa';
+import { FaDesktop, FaCode } from 'react-icons/fa';
 import * as Style from './styles';
+import { ContactCards } from './components/ContactCards';
 
 // COMPONENTS
 import { ModalComponent } from '../../../../../components/Modal';
-import { Image } from '../../../../../components/Image';
-import { CardInfo } from './Components/CardInfo/CardInfo';
+import { CardInfo } from './components/CardInfo/CardInfo';
 import { CardsInfo, expDate, expTime } from '../../functions';
-import { Hr } from '../../../../../components/Hr';
+import { AnimatedLetter } from '../../../../../components/AnimatedLetter';
 import { theme } from '../../../../../styles/theme';
 
 export const aboutModal = () => {
@@ -37,56 +37,38 @@ export const aboutModal = () => {
     }, [time]);
 
     return (
-      <Modal title="Sobre mim" size="lg" Icon={FaDesktop}>
+      <Modal title="Sobre mim" size="fit-content" Icon={FaDesktop}>
         <Style.Container>
-          <Style.HeaderContainer>
-            <Style.Image>
-              <Image
-                width="100%"
-                height="100%"
-                radius="10px"
-                img="https://avatars.githubusercontent.com/u/84144449?s=400&u=0c76fe5cfac811e889325a01537d91fc63437d2e&v=4"
-              />
-            </Style.Image>
+          <ContactCards />
 
-            <CardInfo
-              bgColor={theme.color.primaryD}
-              Icon={FaRegClock}
-              title="Full Stack há"
-              content={
-                <>
-                  <h5>{expDate()}</h5>
-                  <h5>{expTimeValue}</h5>
-                </>
-              }
-            />
-          </Style.HeaderContainer>
+          <Style.HeaderContent>
+            <AnimatedLetter text="Carlos Pasquali" />
 
-          <Style.AboutContainer>
-            <h2>Informações</h2>
-
-            <Style.AboutGrid>
-              {CardsInfo.map((info) => (
+            <Style.AboutContainer>
+              <Style.AboutGrid>
                 <CardInfo
-                  key={info.title}
-                  Icon={info.Icon}
-                  title={info.title}
-                  content={info.content}
+                  bgColor={theme.color.primaryD}
+                  Icon={FaCode}
+                  title="Full Stack há"
+                  content={
+                    <>
+                      <p className="p2">{expDate()}</p>
+                      <p className="p2">{expTimeValue}</p>
+                    </>
+                  }
                 />
-              ))}
-
-              <CardInfo
-                Icon={FaRegClock}
-                title="Full Stack há"
-                content={
-                  <>
-                    <h5>{expDate()}</h5>
-                    <h5>{expTimeValue}</h5>
-                  </>
-                }
-              />
-            </Style.AboutGrid>
-          </Style.AboutContainer>
+                {CardsInfo.map((info) => (
+                  <CardInfo
+                    bgColor={theme.color.primaryD}
+                    key={info.title}
+                    Icon={info.Icon}
+                    title={info.title}
+                    content={info.content}
+                  />
+                ))}
+              </Style.AboutGrid>
+            </Style.AboutContainer>
+          </Style.HeaderContent>
         </Style.Container>
       </Modal>
     );
