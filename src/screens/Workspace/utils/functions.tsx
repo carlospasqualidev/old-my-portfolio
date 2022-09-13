@@ -5,6 +5,9 @@ import {
   FaChess,
   FaLightbulb,
 } from 'react-icons/fa';
+
+import axios from 'axios';
+
 import { ICardInfo } from './types';
 
 export const expTime = () => {
@@ -89,3 +92,16 @@ export const CardsInfo: ICardInfo[] = [
     ),
   },
 ];
+
+export const RequestPersonalProjects = async ({
+  setProjects,
+}: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setProjects: any;
+}) => {
+  axios
+    .get('https://api.github.com/users/carlospasqualidev/repos')
+    .then((res) => {
+      setProjects(res.data);
+    });
+};

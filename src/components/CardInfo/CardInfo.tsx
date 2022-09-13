@@ -1,6 +1,6 @@
-import { Hr } from '../../../../../../../components/Hr';
-import { theme } from '../../../../../../../styles/theme';
-import { ICardInfo } from '../../../../types';
+import { Hr } from '../Hr';
+import { theme } from '../../styles/theme';
+import { ICardInfo } from '../../screens/Workspace/utils/types';
 import * as Style from './styles';
 
 export const CardInfo = ({

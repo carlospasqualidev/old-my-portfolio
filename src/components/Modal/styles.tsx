@@ -10,6 +10,7 @@ export const Background = styled.div<{
   z-index: 10;
 
   width: 100vw;
+  height: 100%;
 
   display: flex;
   flex-direction: column;

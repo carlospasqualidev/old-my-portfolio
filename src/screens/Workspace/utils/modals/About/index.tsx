@@ -9,7 +9,7 @@ import { ContactCards } from './components/ContactCards';
 
 // COMPONENTS
 import { ModalComponent } from '../../../../../components/Modal';
-import { CardInfo } from './components/CardInfo/CardInfo';
+import { CardInfo } from '../../../../../components/CardInfo/CardInfo';
 import { CardsInfo, expDate, expTime } from '../../functions';
 import { AnimatedLetter } from '../../../../../components/AnimatedLetter';
 import { theme } from '../../../../../styles/theme';

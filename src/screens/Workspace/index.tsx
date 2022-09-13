@@ -1,18 +1,26 @@
 // UI
-import { FaNewspaper, FaDesktop } from 'react-icons/fa';
+import { FaNewspaper, FaDesktop, FaProjectDiagram } from 'react-icons/fa';
+
 import { AnimatedLetter } from '../../components/AnimatedLetter';
 import { IconButton } from '../../components/Buttons/IconButton';
 import * as Style from './styles';
+
 import { aboutModal } from './utils/modals/About';
+import { projectsModal } from './utils/modals/Projects';
 
 // MODALS
 
 export const Workspace = () => {
   const { AboutModal, modalAboutIsOpen, toggleModalAbout } = aboutModal();
+  const { ProjectsModal, modalProjectsIsOpen, toggleProjectsAbout } =
+    projectsModal();
 
   return (
     <Style.Container>
       {modalAboutIsOpen && <AboutModal />}
+
+      {modalProjectsIsOpen && <ProjectsModal />}
+
       <Style.ShortcutContainer>
         <IconButton
           Icon={FaNewspaper}
@@ -31,6 +39,16 @@ export const Workspace = () => {
           labelPos="bottom"
           onClick={() => {
             toggleModalAbout();
+          }}
+        />
+      </Style.ShortcutContainer>
+      <Style.ShortcutContainer>
+        <IconButton
+          Icon={FaProjectDiagram}
+          label="Projetos"
+          labelPos="bottom"
+          onClick={() => {
+            toggleProjectsAbout();
           }}
         />
       </Style.ShortcutContainer>
